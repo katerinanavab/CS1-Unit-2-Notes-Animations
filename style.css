@@ -1,1 +1,28 @@
+.box {
+    width: 150px;
+    height: 100px;
+    background-color: violet;
+    margin: 30px;
+}
+
+#rotate {
+    transform: rotate(180deg);
+}
+
+#scale {
+    transform: scale(0.5);
+}
+
+#skew {
+    transform: skew(-45deg);
+}
+
+#translate {
+    /* translate(X, Y) 
+    *  if you give positive values: 
+    *  move RIGHT then DOWN
+    */
+    transform: translate(10px, 30px);
+}
+
 
