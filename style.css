@@ -1,12 +1,12 @@
 .box {
-    width: 150px;
-    height: 100px;
     background-color: violet;
+    width: 120px;
+    height: 100px;
     margin: 30px;
 }
 
 #rotate {
-    transform: rotate(180deg);
+    transform: rotate(160deg);
 }
 
 #scale {
@@ -14,54 +14,11 @@
 }
 
 #skew {
-    transform: skew(-45deg);
+    transform: skew(-20deg);
 }
 
 #translate {
-    /* translate(X, Y) 
-    *  if you give positive values: 
-    *  move RIGHT then DOWN
-    */
-    transform: translate(10px, 30px);
+    /* translate(X, Y) from original position */
+    transform: translate(20px, 30px);
 }
 
-
-/* STEP 1: Define animation sequence */
-@keyframes colorchange {
-    from { background-color: aqua; }
-    to { background-color: hotpink; }
-}
-
-/* STEP 2: Configure animation */
-#animated-box {
-    animation-name: colorchangesmooth;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-}
-
-/* Improve animations by adding more frames (points in the sequence) */
-@keyframes colorchangesmooth {
-    0% { background-color: aqua; }
-    50% { background-color: hotpink; }
-    100% { background-color: aqua; }
-}
-
-#animated-emoji {
-    font-size: 40px;
-    animation-name: emoji;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-@keyframes emoji {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
