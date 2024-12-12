@@ -26,3 +26,42 @@
 }
 
 
+/* STEP 1: Define animation sequence */
+@keyframes colorchange {
+    from { background-color: aqua; }
+    to { background-color: hotpink; }
+}
+
+/* STEP 2: Configure animation */
+#animated-box {
+    animation-name: colorchangesmooth;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Improve animations by adding more frames (points in the sequence) */
+@keyframes colorchangesmooth {
+    0% { background-color: aqua; }
+    50% { background-color: hotpink; }
+    100% { background-color: aqua; }
+}
+
+#animated-emoji {
+    font-size: 40px;
+    animation-name: emoji;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes emoji {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
