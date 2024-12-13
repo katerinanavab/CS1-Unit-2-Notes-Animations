@@ -22,3 +22,44 @@
     transform: translate(20px, 30px);
 }
 
+/* ANIMATION STEP #1
+*  Define frames for the animation sequence
+*/
+@keyframes colorchange {
+    from { background-color: aqua; }
+    to { background-color: hotpink; }
+}
+@keyframes colorchangesmooth {
+    0% { background-color: aqua; }
+    50% { background-color: hotpink; }
+    100% { background-color: aqua; }
+}
+
+/* ANIMATION STEP #2 
+*  Configure animation on an HTML element 
+*/
+#animated-box {
+    background-color: violet;
+    width: 200px;
+    height: 200px;
+    animation-name: colorchangesmooth;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#animated-emoji {
+    font-size: 40px;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
