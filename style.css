@@ -24,42 +24,37 @@
 
 
 
-
-
 /* STEP #1: Define the animation sequence */
+@keyframes colorchange {
+    from { background-color: aqua; }
+    to { background-color: hotpink; }
+}
 @keyframes colorchangesmooth {
     0% { background-color: aqua; }
     50% { background-color: hotpink; }
     100% { background-color: aqua; }
 }
 
-/* STEP #2: Configure animation on an element */
+/* STEP #2: Configure the animation on an HTML element */
 #animated-box {
     width: 200px;
     height: 200px;
-    border: 2px solid black;
+    border: 2px solid;
     animation-name: colorchangesmooth;
     animation-duration: 5s;
     animation-iteration-count: infinite;
 }
 
-
-/* Use TRANSFORMS in an animation */
+/* Using TRANSFORMS in ANIMATIONS */
 @keyframes spin {
-    0% { 
-        transform: rotate(0deg); 
-    }
-    100% { 
-        transform: rotate(360deg) scale(2); 
-    }
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
-
 #animated-emoji {
     animation-name: spin;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-    
-    font-size: 40px;
+    border: 2px solid;
     display: inline-block;
 }
